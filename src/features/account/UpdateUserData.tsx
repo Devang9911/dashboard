@@ -19,7 +19,7 @@ function UpdateUserData() {
     formState: { errors },
   } = useForm<FormValues>();
 
-  // ✅ Set default values when user loads
+  
   useEffect(() => {
     if (user) {
       reset({
@@ -29,12 +29,12 @@ function UpdateUserData() {
   }, [user, reset]);
 
   const handleOnSubmit = (data: FormValues) => {
-    const avatarFile = data.avatar?.[0]; // ✅ correct
+    const avatarFile = data.avatar?.[0]; 
 
     updateUser(
       {
         fullname: data.fullname,
-        avatar: avatarFile, // File | undefined
+        avatar: avatarFile, 
       },
       {
         onSuccess: () => reset(),

@@ -6,15 +6,15 @@ import {
   HiOutlineHomeModern,
   HiOutlineUsers,
 } from "react-icons/hi2";
-import type { IconType } from "react-icons"; //this is the type of icon
+import type { IconType } from "react-icons"; 
 
-type NavItem = { // shape of each individual nav item
+type NavItem = { 
   to: string;
   label: string;
   icon: IconType;
 };
 
-const navItems: NavItem[] = [ // navItems array , element inside array contains NavItem types
+const navItems: NavItem[] = [ 
   {
     to: "dashboard",
     label: "Home",

@@ -21,10 +21,8 @@ export function useOccupancyRate({
     if (!bookings.length || numDays <= 0 || cabinCount <= 0) return 0;
 
     const totalBookedNights = bookings.reduce((acc, b) => {
-      // Prefer DB-calculated nights
       if (b.num_nights != null) return acc + b.num_nights;
 
-      // Fallback to date diff
       if (b.start_date && b.end_date) {
         const nights =
           (new Date(b.end_date).getTime() -
