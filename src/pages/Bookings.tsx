@@ -28,7 +28,7 @@ function Bookings() {
       <div className="flex items-center justify-between w-full">
         <h2 className="text-3xl font-semibold">All Bookings</h2>
 
-        {count > 0 && (
+        {count >= 0 && (
           <div className="flex gap-3">
 
             <div className="flex gap-5">
